@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/main_layout}" xmlns="http://www.w3.org/1999/html"></html>
+<head>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+    <title>Contact - ChatRoom</title>
+</head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css"/>
+
+<section class="hero is-success is-small">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <p class="title">
+                ChatRooms
+            </p>
+        </div>
+    </div>
+</section>
+
+<div class="box cta">
+    <p class="has-text-centered">
+        <span class="tag is-success">Lobby</span>
+    </p>
+
+</div>
+
+<body>
+
+
+<section class="container">
+    <div class="columns features">
+        <div class="column is-4">
+            <a th:href="@{/chat}" style="text-decoration: none;">
+            <div class="card is-shady">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://explain.ninja/wp-content/uploads/2021/03/hhhj-1024x754.jpg" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4><strong>Student-Room</strong></h4>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="column is-4">
+            <a th:href="@{/chat}" style="text-decoration: none;">
+            <div class="card is-shady">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://contents.mediadecathlon.com/p1793850/600cr400/k$53ffb575330c7f369bffddac4f3952ea/DOMYOS%20SWEAT%20RELAXATION%20YOGA%20FEMME%20PE20.jpg?f=600x400" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4><strong>Fitness</strong></h4>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="column is-4">
+            <a th:href="@{/chat}" style="text-decoration: none;">
+            <div class="card is-shady">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://cdn.vox-cdn.com/thumbor/-ee9fPjazhj-4Drvq5qsQ2soKsk=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/16385004/acastro_190618_1777_cloud_gaming_0003.jpg" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4><strong>Gaming</strong></h4>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="container">
+    <div class="columns features">
+        <div class="column is-4">
+            <a th:href="@{/chat}" style="text-decoration: none;">
+            <div class="card is-shady">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://i.pinimg.com/originals/3b/d6/36/3bd636710de01d3256732078071c22c4.gif" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4><strong>Food</strong></h4>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="column is-4">
+            <a th:href="@{/chat}" style="text-decoration: none;">
+            <div class="card is-shady">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://ak.picdn.net/shutterstock/videos/16485502/thumb/1.jpg" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4><strong>Technology</strong></h4>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="column is-4 is-hovered">
+            <a th:href="@{/chat}" style="text-decoration: none;">
+            <div class="card is-shady">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://www.clipartmax.com/png/middle/429-4296815_session-2-10-15-12-00pm-cryptocurrencies-and-cryptocurrency-icon-png.png" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4><strong>Crypto-Currency</strong></h4>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="container">
+    <div class="columns features">
+        <div class="column is-4">
+            <a th:href="@{/chat}" style="text-decoration: none;">
+            <div class="card is-shady">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://media.istockphoto.com/videos/travel-animation-around-the-world-video-id1185860472?s=640x640" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4><strong>Travelling</strong></h4>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="column is-4">
+            <a th:href="@{/chat}" style="text-decoration: none;">
+            <div class="card is-shady">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://populous.com/wp-content/uploads/2018/01/Tottenham-hotspur-stadium-hero-scaled.jpg" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4><strong>Football</strong></h4>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="column is-4 is-hovered">
+            <a th:href="@{/chat}" style="text-decoration: none;">
+            <div class="card is-shady">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://explain.ninja/wp-content/uploads/2021/03/hhhj-1024x754.jpg" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4><strong>Business</strong></h4>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+
+</section>
+
+</body>
+
+<div th:fragment="footer">
+    <hr class="my-4">
+    <p style="text-align:center;">
+        &copy; Midnight Coders - Group 10 - 2022
+    </p>
+</div>

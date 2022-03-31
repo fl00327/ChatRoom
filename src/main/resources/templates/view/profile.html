@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{fragments/main_layout}">
+
+<head>
+    <title>Profile - FitLives</title>
+    <script src="js/jquery.canvasjs.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+</head>
+<body>
+<div layout:fragment="content" class ="container mySpace">
+    <div class="jumbotron">
+        <div class="meal_header_top" style="display: flex; justify-content: space-between;">              
+            <h1 class="display-5">My Profile</h1>             
+        </div>   
+
+        <div class="meal_header_top" style="display: flex; justify-content: space-between;">              
+            <p class="lead">Welcome back, [[${user.firstName}]].</p>   
+            <form class="form-inline my-2 my-lg-0" action="/logout" method="post">
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                <button type="submit" class="btn btn-primary my-2 my-sm-0">Logout</button>
+              </form>
+        </div>   
+         
+        <hr class="my-4">
+
+
+
+        <div style="display: flex; justify-content: space-between;">
+            <img style="width: 49%; border: 1px solid;" src="https://cdn.dribbble.com/users/1162077/screenshots/4715354/games-pattern.gif" alt="">
+            <img style="width: 49%; border: 1px solid;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiRZZd0ZcRNl0XqlYetOrOlhcTMIh3Fnu2cw&usqp=CAU" alt="">
+        </div>
+        
+         
+    </div>
+</div>
+</body>
+</html>
+
+
+<div th:fragment="footer">
+    <hr class="my-4">
+    <p style="text-align:center;">
+        &copy; Midnight Coders - Group 10 - 2022
+    </p>
+</div>

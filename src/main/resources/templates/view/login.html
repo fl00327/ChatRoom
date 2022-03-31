@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{fragments/main_layout}"></html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login - ChatRoom</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+
+<body>
+<section class="container">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-4 is-offset-4">
+                <h3 class="title has-text-black">Login</h3>
+                <hr class="login-hr">
+                <p class="subtitle has-text-black">Please login to proceed.</p>
+                <div class="box">
+                    <figure class="avatar">
+                        <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/344/external-chat-easter-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png" width="100px">
+                    </figure>
+                    <form name="f" th:action="@{/login}" method="post">
+                        <div th:if="${param.error}" class="alert alert-error">
+                            Invalid username and password.
+                        </div>
+                        <div th:if="${param.logout}" class="alert alert-success">
+                            You have been logged out.
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" type="text" id="email" name="email" placeholder="Your Email" autofocus=""/>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" type="password" id="password" name="password" placeholder="Your Password"/>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="checkbox">
+                            </label>
+                        </div>
+                        <button type="submit" class="button is-block is-info is-large is-fullwidth">Login</button>
+                    </form>
+                </div>
+                <p class="has-text-grey">
+                    New to ChatRoom? <a th:href="@{/register}">Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<script async type="text/javascript" src="../js/bulma.js"></script>
+</body>
+
+</html>
+
+<div th:fragment="footer">
+    <hr class="my-4">
+    <p style="text-align:center;">
+        &copy; Midnight Coders - Group 10 - 2022
+    </p>
+</div>

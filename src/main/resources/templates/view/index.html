@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{fragments/main_layout}"></html>
+<head>
+    <title>Homepage - ChatRoom</title>
+</head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css"/>    
+
+<div layout:fragment="content" class ="container mySpace">
+
+    <div class="box cta">
+    
+        <div sec:authorize="!isAuthenticated()">
+            <p class="has-text-centered">
+                <a th:href="@{/login}" style="text-decoration: none;"><span class="tag is-primary">Click here to access the apps features</span></a>
+            </p>
+        </div>
+    
+        <div sec:authorize="isAuthenticated()">
+            <p class="has-text-centered">
+                <a th:href="@{/profile}" style="text-decoration: none;"><span class="tag is-primary">Welcome back, [[${user.firstName}]].</span></a>
+        </div>
+    
+    </div>  
+    
+    <section class="container">
+        <div class="columns features">
+            <div class="column is-4" >
+                <a th:href="@{/chat}" style="text-decoration: none;">
+                <div class="card is-shady" style="height: 610px;">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <h4>ChatRooms</h4>
+                            <p>ChatRooms consists of a chat lobby where users can join a chatroom of their chosen category.</p>
+                            <p>We want our users to stay connected and share their knowledge and experience with each other</p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="column is-4">                
+                <a th:href="@{/}" style="text-decoration: none;">
+                <div class="card is-shady" style="height: 610px;">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://www.thewealth.today/wp-content/uploads/2021/09/chatbot-4071274_1920.jpg" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <h4>ChatBot</h4>
+                            <p>ChatRoom is integrated with a ChatBot</p>
+                            <p>You can ask anything!!!</p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="column is-4">
+                    <a th:href="@{/covid}" style="text-decoration: none;">
+                        <div class="card is-shady" style="height: 500px;">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://images.unsplash.com/photo-1585222515068-7201a72c4181?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h4>COVID-19</h4>
+                                    <p>Covid-19 Daily <strong>New Cases - Total Deaths - Maps Zones.</strong> A feature to keep Fitlives users updated regarding the current situation of the pandemic.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        </div>    
+    </section>
+
+    <footer>
+        <section class="section">
+            <div class="container">
+                <div class="columns is-multiline">
+                    <div class="column is-one-third">
+                        <article class="notification media has-background-white">
+                            <figure class="media-left">
+                    <span class="icon">
+                      <i class="has-text-warning fa fa-columns fa-lg"></i>
+                    </span>
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h1 class="title is-size-4">Chatting</h1>
+                                    <p class="is-size-5 subtitle">
+                                        Multiple <strong>ChatRooms</strong> Integrated into One Application
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="column is-one-third">
+                        <article class="notification has-background-white media">
+                            <figure class="media-left">
+                    <span class="icon has-text-info">
+                      <i class="fa fa-lg fa-wpforms"></i>
+                    </span>
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h1 class="title is-size-4">ChatBot</h1>
+                                    <p class="is-size-5 subtitle">
+                                       Got a question? Ask our friendly <strong>Chatbot</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="column is-one-third">
+                        <article class="notification has-background-white media">
+                            <figure class="media-left">
+                    <span class="icon has-text-danger">
+                      <i class="fa fa-lg fa-cubes"></i>
+                    </span>
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h1 class="title is-size-4">Socializing</h1>
+                                    <p class="is-size-5 subtitle">
+                                        Socialize with your peers
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div sec:authorize="!isAuthenticated()">
+            <div class="content has-text-centered">
+                <div class="control level-item">
+                    <a href="/register">
+                        <div class="tags has-addons">
+                            <span class="tag is-dark">Register</span>
+                        </div>
+                    </a>
+                    <a href="/login">
+                        <div class="tags has-addons">
+                            <span class="tag is-info">Login</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</div>
