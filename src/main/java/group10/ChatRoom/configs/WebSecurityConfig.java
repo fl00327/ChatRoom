@@ -35,6 +35,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .authorizeRequests()
             .antMatchers("/profile").authenticated()
             .antMatchers("/chat").authenticated()
+                .antMatchers("/studentroom").authenticated()
+                .antMatchers("/chatrooms").authenticated()
             .antMatchers("/register").not().authenticated()
             .and()
             .formLogin()

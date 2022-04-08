@@ -27,7 +27,7 @@ body:before {
     position: absolute;
     top: 0;
     left: 0;
-    background: #128ff2;
+    background: #0dac1d;
     content: "";
     z-index: 0;
 }
@@ -303,6 +303,6 @@ button.accent {
         background: #1abc9c;
         color: white;
         font-size: 30px;
-      }
-    
+    }
+
 }

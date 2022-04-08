@@ -13,9 +13,7 @@ import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 
 import group10.ChatRoom.entities.ChatMessage;
 
-/**
- * Created by rajeevkumarsingh on 25/07/17.
- */
+
 @Component
 public class WebSocketEventListener {
 
@@ -23,6 +21,9 @@ public class WebSocketEventListener {
 
     @Autowired
     private SimpMessageSendingOperations messagingTemplate;
+
+    @Autowired
+    private SimpMessageSendingOperations messagingTemplateOne;
 
     @EventListener
     public void handleWebSocketConnectListener(SessionConnectedEvent event) {
@@ -33,7 +34,13 @@ public class WebSocketEventListener {
     public void handleWebSocketDisconnectListener(SessionDisconnectEvent event) {
         StompHeaderAccessor headerAccessor = StompHeaderAccessor.wrap(event.getMessage());
 
+        StompHeaderAccessor headerAccessor1 = StompHeaderAccessor.wrap(event.getMessage());
+
         String username = (String) headerAccessor.getSessionAttributes().get("username");
+
+        String username1 = (String) headerAccessor1.getSessionAttributes().get("username1");
+
+
         if(username != null) {
             logger.info("User Disconnected : " + username);
 
@@ -41,7 +48,21 @@ public class WebSocketEventListener {
             chatMessage.setType(ChatMessage.MessageType.LEAVE);
             chatMessage.setSender(username);
 
+
+
             messagingTemplate.convertAndSend("/topic/public", chatMessage);
+
+        }
+
+        if(username1 != null){
+            logger.info("User Disconnected : " + username1);
+
+            ChatMessage chatMessage1 = new ChatMessage();
+            chatMessage1.setType(ChatMessage.MessageType.LEAVE);
+            chatMessage1.setSender(username1);
+
+
+            messagingTemplateOne.convertAndSend("/topic/publicone", chatMessage1);
         }
     }
 }

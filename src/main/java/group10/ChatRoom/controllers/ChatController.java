@@ -13,6 +13,7 @@ import group10.ChatRoom.entities.User;
 
 @Controller
 public class ChatController {
+
     @GetMapping("/chat")
     public String getChat(User user){
         return "view/chat"; //Return chat page
