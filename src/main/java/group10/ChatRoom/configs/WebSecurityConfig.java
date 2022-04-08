@@ -34,11 +34,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
             .authorizeRequests()
             .antMatchers("/profile").authenticated()
-            .antMatchers("/map").authenticated()
-            .antMatchers("/entry").authenticated()
-            .antMatchers("/new_diary").authenticated()
-            .antMatchers("/diaries").authenticated()
-            .antMatchers("/bmi-calculator").authenticated()
             .antMatchers("/chat").authenticated()
             .antMatchers("/register").not().authenticated()
             .and()
