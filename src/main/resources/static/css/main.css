@@ -27,7 +27,7 @@ body:before {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("https://preview.redd.it/78gpjmgfejh11.jpg?auto=webp&s=bba622289fa41fcbffc6bb5890179bd1229d2ed5");
+    background-image: url("forest.png");
     content: "";
     z-index: 0;
 }
