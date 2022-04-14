@@ -1,7 +1,5 @@
 package group10.ChatRoom.controllers;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -9,27 +7,29 @@ import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 
 import group10.ChatRoom.entities.ChatMessage;
 import group10.ChatRoom.entities.User;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class FoodChatController {
+public class FitnessChatController {
 
-    @GetMapping("/food")
-    public String getFoodChat(User user){
-        return "view/food"; //Return chat page
+    @GetMapping("/fitness")
+    public String getFitnessChat(User user){
+        return "view/fitness"; //Return chat page
     }
 
-    @MessageMapping("/chatthree.sendMessage")
-    @SendTo("/topic/publicthree")
+    @MessageMapping("/chatfive.sendMessage")
+    @SendTo("/topic/publicfive")
     public ChatMessage sendMessage(@Payload ChatMessage chatMessage) {
         return chatMessage;
     }
 
-    @MessageMapping("/chatthree.addUser")
-    @SendTo("/topic/publicthree")
+    @MessageMapping("/chatfive.addUser")
+    @SendTo("/topic/publicfive")
     public ChatMessage addUser(@Payload ChatMessage chatMessage,
                                SimpMessageHeaderAccessor headerAccessor) {
         // Add username in web socket session
-        headerAccessor.getSessionAttributes().put("username3", chatMessage.getSender());
+        headerAccessor.getSessionAttributes().put("username5", chatMessage.getSender());
         return chatMessage;
     }
 

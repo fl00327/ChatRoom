@@ -6,8 +6,8 @@ tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
 model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-medium")
 
 name = "Faseeh"
-mentalhealth = "Mental Health"
-stag = "Stag Hill"
+mentalhealth = "Mental"
+stag = "Stag"
 
 def get_chat_response(text):
     # Let's chat for 5 lines
@@ -16,10 +16,10 @@ def get_chat_response(text):
         var1 = "I was created by Faseeh at the University Of Surrey"
         return var1
     elif mentalhealth in text:
-        var2 = "You shoulf contact your GP or NHS (111)\nIf need to talk to someone in the night, there is a nightline service provided by the university of surrey's student union."
+        var2 = "You should contact your GP or NHS (111)\nIf You need to talk to someone in the night, there is a nightline service provided by the University Of Surrey's SU."
         return var2
     elif stag in text:
-        var3 = "Stag Hill Campus"
+        var3 = "Stag Hill Campus is found in the centre of the University Of Surrey, GU2 7XH"
         return var3
     else:
         for step in range(1):
