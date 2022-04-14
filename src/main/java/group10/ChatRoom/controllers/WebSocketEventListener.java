@@ -155,7 +155,7 @@ public class WebSocketEventListener {
             chatMessage8.setSender(username8);
 
 
-            messagingTemplateTwo.convertAndSend("/topic/publicseven", chatMessage8);
+            messagingTemplateTwo.convertAndSend("/topic/publiceight", chatMessage8);
         }
     }
 }
