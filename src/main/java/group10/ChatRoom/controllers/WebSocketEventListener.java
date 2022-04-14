@@ -52,6 +52,10 @@ public class WebSocketEventListener {
 
         String username6 = (String) headerAccessor1.getSessionAttributes().get("username6");
 
+        String username7 = (String) headerAccessor1.getSessionAttributes().get("username7");
+
+        String username8 = (String) headerAccessor1.getSessionAttributes().get("username8");
+
 
         if(username != null) {
             logger.info("User Disconnected : " + username);
@@ -130,6 +134,28 @@ public class WebSocketEventListener {
 
 
             messagingTemplateTwo.convertAndSend("/topic/publicsix", chatMessage6);
+        }
+
+        if(username7 != null){
+            logger.info("User Disconnected : " + username7);
+
+            ChatMessage chatMessage7 = new ChatMessage();
+            chatMessage7.setType(ChatMessage.MessageType.LEAVE);
+            chatMessage7.setSender(username7);
+
+
+            messagingTemplateTwo.convertAndSend("/topic/publicseven", chatMessage7);
+        }
+
+        if(username8 != null){
+            logger.info("User Disconnected : " + username8);
+
+            ChatMessage chatMessage8 = new ChatMessage();
+            chatMessage8.setType(ChatMessage.MessageType.LEAVE);
+            chatMessage8.setSender(username8);
+
+
+            messagingTemplateTwo.convertAndSend("/topic/publicseven", chatMessage8);
         }
     }
 }
