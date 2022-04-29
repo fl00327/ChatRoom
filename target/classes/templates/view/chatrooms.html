@@ -11,6 +11,12 @@
             padding: 5px;
 
         }
+        .hover_on_chatroom{
+            text-align: center;
+            transition: 0.3s;
+            font-style: italic;
+        } 
+        .hover_on_chatroom:hover {opacity: 0.7; color: slategray;}
     </style>
 </head>
 
@@ -23,25 +29,15 @@
 <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
 <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css"/>
 
-<section class="hero is-success is-small">
+<section class="hero is-success is-small"; style="margin-bottom: 30px;">
     <div class="hero-body">
         <div class="container has-text-centered">
-            <p class="title">
-                ChatRooms
-            </p>
+            <p class="title">Instant Messaging Lobby</p>
         </div>
     </div>
 </section>
 
-<div class="box cta">
-    <p class="has-text-centered">
-        <span class="tag is-success">Lobby</span>
-    </p>
-
-</div>
-
 <body>
-
 
 <section class="container">
     <div class="columns features">
@@ -53,9 +49,9 @@
                         <img src="https://explain.ninja/wp-content/uploads/2021/03/hhhj-1024x754.jpg" alt="Placeholder image" class="modal-button" data-target="modal-image2">
                     </figure>
                 </div>
-                <div class="card-content">
+                <div class="card-content";>
                     <div class="content">
-                        <h4><strong>Student-Room</strong></h4>
+                        <h4 class = "hover_on_chatroom"><strong>MyUni</strong></h4>
                     </div>
                 </div>
             </div>
@@ -66,15 +62,15 @@
             <div class="card is-shady">
                 <div class="card-image">
                     <figure class="image is-4by3">
-                        <img src="https://penntoday.upenn.edu/sites/default/files/2022-03/metaverse-social-teaser-embed.jpg" alt="Placeholder image">
+                        <img src="https://contents.mediadecathlon.com/p1793850/600cr400/k$53ffb575330c7f369bffddac4f3952ea/DOMYOS%20SWEAT%20RELAXATION%20YOGA%20FEMME%20PE20.jpg?f=600x400" alt="Placeholder image">
                     </figure>
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4><strong>Metaverse</strong></h4>
+                        <h4 class = "hover_on_chatroom"><strong>Mental Health</strong></h4>
                     </div>
                 </div>
-            </div>
+            </div>     
             </a>
         </div>
         <div class="column is-4">
@@ -87,16 +83,14 @@
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4><strong>Gaming</strong></h4>
+                        <h4 class = "hover_on_chatroom"><strong>Extracurricular Activities</strong></h4>
                     </div>
                 </div>
             </div>
             </a>
         </div>
     </div>
-
 </section>
-
 
 <section class="container">
     <div class="columns features">
@@ -110,7 +104,7 @@
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4><strong>Food</strong></h4>
+                        <h4 class = "hover_on_chatroom"><strong>Nutrition</strong></h4>
                     </div>
                 </div>
             </div>
@@ -127,7 +121,7 @@
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4><strong>Technology</strong></h4>
+                        <h4 class = "hover_on_chatroom"><strong>Technology</strong></h4>
                     </div>
                 </div>
             </div>
@@ -139,21 +133,19 @@
             <div class="card is-shady">
                 <div class="card-image">
                     <figure class="image is-4by3">
-                        <img src="https://contents.mediadecathlon.com/p1793850/600cr400/k$53ffb575330c7f369bffddac4f3952ea/DOMYOS%20SWEAT%20RELAXATION%20YOGA%20FEMME%20PE20.jpg?f=600x400" alt="Placeholder image">
+                        <img src="https://penntoday.upenn.edu/sites/default/files/2022-03/metaverse-social-teaser-embed.jpg" alt="Placeholder image">
                     </figure>
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4><strong>Fitness</strong></h4>
+                        <h4 class = "hover_on_chatroom"><strong>Metaverse</strong></h4>
                     </div>
                 </div>
             </div>
             </a>
         </div>
     </div>
-
 </section>
-
 
 <section class="container">
     <div class="columns features">
@@ -167,7 +159,7 @@
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4><strong>Travelling</strong></h4>
+                        <h4 class = "hover_on_chatroom"><strong>Travelling</strong></h4>
                     </div>
                 </div>
             </div>
@@ -184,7 +176,7 @@
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4><strong>Sport</strong></h4>
+                        <h4 class = "hover_on_chatroom"><strong>Events</strong></h4>
                     </div>
                 </div>
             </div>
@@ -201,16 +193,14 @@
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4><strong>Business</strong></h4>
+                        <h4 class = "hover_on_chatroom"><strong>Business</strong></h4>
                     </div>
                 </div>
             </div>
             </a>
         </div>
     </div>
-
 </section>
-
 </body>
 
 <div th:fragment="footer">

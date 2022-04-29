@@ -4,12 +4,41 @@
 <head>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
-    <title>Contact - ChatRoom</title>
+    <title>Contact Us</title>
     <style type="text/css">
         img {
             padding: 5px;
         }
+        .text{
+        text-align: center;
+        font-style: italic;
+    }
     </style>
+    <style>
+        
+        input[type=text], select, textarea {
+          width: 50%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-sizing: border-box;
+          margin-bottom: 10px;
+          margin-top: 10px;
+        }
+        
+        input[type=submit] {
+          background-color: #edbb24;
+          color: black;
+          padding: 12px 15px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #dd7d10;
+        }
+        </style>
     <link rel="shortcut icon" sizes="180x180" href="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/344/external-chat-easter-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png">
 </head>
 
@@ -22,7 +51,7 @@
 <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
 <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css"/>
 
-<section class="hero is-warning is-small">
+<section class="hero is-warning is-small"; style="margin-bottom: 30px;">
     <div class="hero-body">
         <div class="container has-text-centered">
             <p class="title">
@@ -34,12 +63,11 @@
 
 <div class="box cta">
     <p class="has-text-centered">
-        <span class="tag is-warning">Below are the people who are working on this project</span>
+        <span class="text"><strong>Meet the Developers</strong></span>
     </p>
 
 </div>
 <body>
-
 
 <section class="container">
     <div class="columns features">
@@ -52,8 +80,8 @@
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4><strong>Vladi Manolov</strong></h4>
-                        <p>Email: vm00328@surrey.ac.uk</p>
+                        <h4 class="text"><strong>Vladislav Manolov</strong></h4>
+                        <p class="text">email: vm00328@surrey.ac.uk</p>
                     </div>
                 </div>
             </div>
@@ -67,8 +95,8 @@
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4><strong>Faseeh Lodhi</strong></h4>
-                        <p>Email: fl00327@surrey.ac.uk</p>
+                        <h4 class = "text"><strong>Faseeh Lodhi</strong></h4>
+                        <p class = "text">email: fl00327@surrey.ac.uk</p>
                     </div>
                 </div>
             </div>
@@ -82,8 +110,8 @@
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4><strong>Akash Nambiar</strong></h4>
-                        <p>Email: an01100@surrey.ac.uk</p>
+                        <h4 class = "text"><strong>Akash Nambiar</strong></h4>
+                        <p class = "text">email: an01100@surrey.ac.uk</p>
                     </div>
                 </div>
             </div>
@@ -104,8 +132,8 @@
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4><strong>Dan S Jezeph</strong></h4>
-                        <p>Email: dj00210@surrey.ac.uk</p>
+                        <h4 class="text"><strong>Dan S Jezeph</strong></h4>
+                        <p class="text">email: dj00210@surrey.ac.uk</p>
                     </div>
                 </div>
             </div>
@@ -119,8 +147,8 @@
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4><strong>Sudheesh Sudevan</strong></h4>
-                        <p>Email: ss03560@surrey.ac.uk</p>
+                        <h4 class="text"><strong>Sudheesh Sudevan</strong></h4>
+                        <p class="text">email: ss03560@surrey.ac.uk</p>
                     </div>
                 </div>
             </div>
@@ -129,14 +157,23 @@
 
 </section>
 
+<div class="container"; style="margin-top:20px; margin-left: 30%;">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <div><input type="text" id="fname" name="firstname" placeholder="First Name"></div>
+
+    <label for="lname">Last Name</label>
+    <div><input type="text" id="lname" name="lastname" placeholder="Last Name"></div>
+
+    <label for="subject">Subject</label>
+    <div></div><textarea id="subject" name="subject" placeholder="Message Us" style="height:100px"></textarea></div>
+
+    <input type="submit" value="Submit"; style="margin-left: 45%; margin-top: 10px;">
+  </form>
+</div>
+
 <div layout:fragment="content" class ="container mySpace">
     <div class="card">
-        <div class="box cta">
-            <p class="has-text-centered">
-                <span class="tag is-success">To get support email us at support@chatroom.com</span>
-            </p>
-
-        </div>
 
         <div id='map' style='width: 100%; height: 300px;'></div>
         <script>
@@ -150,7 +187,7 @@
             var marker = new mapboxgl.Marker()
                 .setLngLat([-0.5895, 51.2431])
                 .addTo(map)
-        </script>   
+        </script>
     </div>
 
 </div>
