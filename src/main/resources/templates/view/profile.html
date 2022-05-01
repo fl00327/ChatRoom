@@ -41,12 +41,11 @@
                         ChatBot - Chatrooms
                     </h2>
                     <br>
-                    <p class="has-text-centered">
-                    <form class="form" action="/logout" method="post">
-                        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
-                        <button type="submit" class="button is-medium is-info is-outlined">Logout</button>
-                    </form>
-                    </p>
+                    <a th:href="@{/chatbot}" style="text-decoration: none;">
+                       <p class="has-text-centered">
+                          <button type="submit" class="button is-medium is-info is-outlined">ChatBot</button>
+                       </p>
+                    </a>
                 </div>
             </div>
         </div>
