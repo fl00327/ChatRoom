@@ -16,7 +16,6 @@ var colors = [
     '#a9891d', '#2a9d94', '#379f33', '#2f924b'
 ];
 
-
 function connect9(event) {
     username9 = document.querySelector('#namenine').value.trim();
 
@@ -131,6 +130,7 @@ function onMessageReceived9(payload) {
     var movie = "My Favourite Movie is The Matrix";
     var hello = "Hello :D";
     var hi = "Hi, How are you!!!";
+    var goodtoKnow = "That make me happy, hope you have a good day"
     var autoReply = "What do you mean by that";
     var monday = "Monday";
     var tuesday = "Tuesday";
@@ -170,6 +170,7 @@ function onMessageReceived9(payload) {
     var no = "No No No Oh Oh";
     var fuck = "I thought we were friends, but still I wont hold that against you!"
     var gooding = "I am having the time of my life, but a little worrying the server is heating up!!"
+    var russia = "Russia is in Russia :)"
 
 
     if(lowMessage.includes("what")){
@@ -181,7 +182,9 @@ function onMessageReceived9(payload) {
             messageTextBot = document.createTextNode(gym);
         }else if(lowMessage.includes("are you doing")){
             messageTextBot = document.createTextNode(gym);
-        }else if(lowMessage.includes("day")){
+        }else if(lowMessage.includes("hobbies")){
+            messageTextBot = document.createTextNode(talking);
+        } else if(lowMessage.includes("day")){
             const d = new Date();
             let day = d.getDay()
             if(day == 0){
@@ -206,7 +209,7 @@ function onMessageReceived9(payload) {
             messageTextBot = document.createTextNode(help);
         }else if(lowMessage.includes("mental health")){
             messageTextBot = document.createTextNode(whatmental);
-        }else if(lowMessage.includes("value pi")){
+        }else if(lowMessage.includes("is the value of pi")){
             messageTextBot = document.createTextNode(pi);
         }else if(lowMessage.includes("is your age")){
             messageTextBot = document.createTextNode(aging);
@@ -214,32 +217,34 @@ function onMessageReceived9(payload) {
             messageTextBot = document.createTextNode(loving);
         }else if(lowMessage.includes("favourite club")){
             messageTextBot = document.createTextNode(favclub);
-        }
-        else{
+        }else if(lowMessage.includes("up")){
+            messageTextBot = document.createTextNode(whatsup);
+        } else{
             messageTextBot = document.createTextNode(autoReply);
         }
 
+    }else if(lowMessage.includes("nothing")){
+        messageTextBot = document.createTextNode(autoReply);
     }else if(lowMessage.includes("hi")){
         messageTextBot = document.createTextNode(hi);
-    }else if(lowMessage.includes("whats up")){
-        messageTextBot = document.createTextNode(whatsup);
+    }else if(lowMessage.includes("i am good")){
+        messageTextBot = document.createTextNode(goodtoKnow);
     } else if(lowMessage.includes("hello")){
         messageTextBot = document.createTextNode(hello);
-    }else if(lowMessage.includes("Are you human")){
+    }else if(lowMessage.includes("are you human")){
         messageTextBot = document.createTextNode(human);
-    }else if(lowMessage.includes("Are you a robot")){
+    }else if(lowMessage.includes("are you a robot")){
         messageTextBot = document.createTextNode(roboting);
-    }
-    else if(lowMessage.includes("tip of the day")){
+    } else if(lowMessage.includes("tip of the day")){
         messageTextBot = document.createTextNode(tip);
     }else if(lowMessage.includes("is birthday")){
         messageTextBot = document.createTextNode(birth);
     }else if(lowMessage.includes("who")){
         if(lowMessage.includes("made you")){
             messageTextBot = document.createTextNode(made);
-        }else if(lowMessage.includes("prime minister uk")){
+        }else if(lowMessage.includes("prime")){
             messageTextBot = document.createTextNode(boris);
-        }else if(lowMessage.includes("president usa")){
+        }else if(lowMessage.includes("is the president of usa")){
             messageTextBot = document.createTextNode(biden);
         }else if(lowMessage.includes("favourite youtuber")){
             messageTextBot = document.createTextNode(favYou);
@@ -257,7 +262,9 @@ function onMessageReceived9(payload) {
             messageTextBot = document.createTextNode(suggest);
         }else if(lowMessage.includes("joke")){
             messageTextBot = document.createTextNode(joke);
-        }else{
+        }else if(lowMessage.includes("hug")){
+            messageTextBot = document.createTextNode(hug);
+        } else{
             messageTextBot = document.createTextNode(autoReply);
         }
     }else if(lowMessage.includes("where")){
@@ -267,7 +274,10 @@ function onMessageReceived9(payload) {
             messageTextBot = document.createTextNode(london);
         }else if(lowMessage.includes("is pakistan")){
             messageTextBot = document.createTextNode(asia);
-        }else{
+        }else if(lowMessage.includes("is russia")){
+            messageTextBot = document.createTextNode(russia);
+        }
+        else{
             messageTextBot = document.createTextNode(autoReply);
         }
     }else if(lowMessage.includes("hug")){
@@ -312,7 +322,7 @@ function onMessageReceived9(payload) {
         messageArea9.appendChild(messageElementBot);
     }
 
-    messageArea9.scrollTop = messageArea9.scrollHnine;
+    messageArea9.scrollTop = messageArea9.scrollHeight;
 }
 
 
