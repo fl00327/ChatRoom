@@ -162,38 +162,38 @@ function onMessageReceived9(payload) {
     var talking = "Does talking to you count?";
     var sleep = "Okay. I didn’t want to do this but you leave me no choice. \n" +
         "Start counting. \n" +
-        "1, 2, 3, 4 --- Are you sleep yet!!!";
+        "1, 2, 3, 4 --- Are you asleep yet!!!";
     var yes = "Yes I know";
-    var no = "No No No Oh Oh";
+    var no = "Oh, no.";
     var fuck = "I thought we were friends, but still I wont hold that against you!";
     var gooding = "I am having the time of my life in the cloud ";
     var russia = "Russia is in Russia :)";
     var japan = "I'm sorry, I don't speak Japanese.";
     var slept = "I can't even.";
     var loving = "I love you 3000.";
-    var frat = "I speak a language called binary, Ever heard of that?";
+    var frat = "I speak a language called binary, ever heard of that?";
     var smoke = "I do not smoke";
     var crazu = "I'm not sure if that's a good thing or a bad thing.";
     var crazy = "I'm not crazy, I'm just a little crazy.";
     var freng = "I am your friend.";
     var movie = "Interstellar";
     var basic = "I'm not sure what you mean by that.";
-    var okay = "Okay Okay";
-    var bye = "Ciao Ciao, Bye Bye";
-    var thank = "You are most welcome dear friend, btw can I call you my friend?";
+    var okay = "Okay";
+    var bye = "Goodbye!";
+    var thank = "You are most welcome dear friend.";
     var stag = "Stag Hill Campus is found in the centre of the University Of Surrey, GU2 7XH";
     var fact = "The Japanese word 'Kuchi zamishi' is the act of eating when you're not hungry because your mouth is lonely. We do this all the time."
     var inters = "Ketchup was once sold as medicine. The condiment was prescribed and sold to people suffering with indigestion back in 1834."
     var helpinz = "Helping you is my number one priority";
     var agree = "Agreed Upon!!!";
-    var disagree = "I respect your opinion";
-    var hate = "I am really sorry, If I offended you in any way"
+    var disagree = "I respect your opinion.";
+    var hate = "I am really sorry, If I offended you in any way."
     var morningz = "Good morning!"
-    var afternoon = "Good afternoon"
-    var nigh = "Good night, Sweet dreams!"
+    var afternoon = "Good afternoon!"
+    var nigh = "Good night, sweet dreams!"
     var goodz = "I'm glad you're enjoying it!"
     var prolly = "I'll probably just go to sleep."
-
+    var depression = "I am sorry tp hear that. You will find some useful information on the following website: https://www.nhs.uk/nhs-services/mental-health-services/"
 
     if(lowMessage.includes("what")){
         if(lowMessage.includes("should i")){
@@ -387,6 +387,22 @@ function onMessageReceived9(payload) {
         messageTextBot = document.createTextNode(agree);
     }else if(lowMessage.includes("hate")){
         messageTextBot = document.createTextNode(hate);
+    }
+    else if(lowMessage.includes("i have")){
+        if(lowMessage.includes("depression"))
+            messageTextBot = document.createTextNode(depression);
+        else if(lowMessage.includes("anxiety")){
+            messageTextBot = document.createTextNode(depression);
+        }
+        else if(lowMessage.includes("issues")){
+            messageTextBot = document.createTextNode(depression);
+        }
+        else if(lowMessage.includes("mental issues")){
+            messageTextBot = document.createTextNode(depression);
+        }
+        else if(lowMessage.includes("mental health issues")){
+            messageTextBot = document.createTextNode(depression);
+        }
     }
     else{
         messageTextBot = document.createTextNode(autoReply);

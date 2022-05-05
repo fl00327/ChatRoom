@@ -4,7 +4,7 @@ import mysql.connector.errors
 dbconn = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="chatroom@123",
+  password="password",
   database="chatrooms"
 )
 
