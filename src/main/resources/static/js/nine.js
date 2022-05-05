@@ -11,10 +11,7 @@ var connectingElement9 = document.querySelector('.connecting');
 var stompClient9 = null;
 var username9 = null;
 
-var colors = [
-    '#2c69b3', '#7e68cd', '#269f51', '#269f51',
-    '#a9891d', '#2a9d94', '#379f33', '#2f924b'
-];
+var colors = ['#2c69b3', '#7e68cd', '#a9891d', '#269f51' ];
 
 function connect9(event) {
     username9 = document.querySelector('#namenine').value.trim();
@@ -169,7 +166,7 @@ function onMessageReceived9(payload) {
     var yes = "Yes I know";
     var no = "No No No Oh Oh";
     var fuck = "I thought we were friends, but still I wont hold that against you!";
-    var gooding = "I am having the time of my life, but a little worrying the server is heating up!!";
+    var gooding = "I am having the time of my life in the cloud ";
     var russia = "Russia is in Russia :)";
     var japan = "I'm sorry, I don't speak Japanese.";
     var slept = "I can't even.";
@@ -199,9 +196,10 @@ function onMessageReceived9(payload) {
 
 
     if(lowMessage.includes("what")){
-        if(lowMessage.includes("should i do")){
+        if(lowMessage.includes("should i")){
             messageTextBot = document.createTextNode(pizza);
-        }else if(lowMessage.includes("is your name")){
+        }
+        else if(lowMessage.includes("is your name")){
             messageTextBot = document.createTextNode(unibpt);
         }else if(lowMessage.includes("will you do today")){
             messageTextBot = document.createTextNode(gym);
@@ -209,7 +207,7 @@ function onMessageReceived9(payload) {
             messageTextBot = document.createTextNode(gym);
         }else if(lowMessage.includes("hobbies")){
             messageTextBot = document.createTextNode(talking);
-        } else if(lowMessage.includes("day")){
+        } else if(lowMessage.includes("is the day")){
             const d = new Date();
             let day = d.getDay()
             if(day == 0){
@@ -251,7 +249,9 @@ function onMessageReceived9(payload) {
             messageTextBot = document.createTextNode(autoReply);
         }
 
-    }else if(lowMessage.includes("morning")){
+    }else if(lowMessage.includes("help")){
+        messageTextBot = document.createTextNode(helpinz);
+    } else if(lowMessage.includes("morning")){
         messageTextBot = document.createTextNode(morningz);
     }else if(lowMessage.includes("afternoon")){
         messageTextBot = document.createTextNode(afternoon);
@@ -304,7 +304,7 @@ function onMessageReceived9(payload) {
         } else{
             messageTextBot = document.createTextNode(basic);
         }
-    }else if(lowMessage.includes("mental health advice")){
+    }else if(lowMessage.includes("mental health")){
         messageTextBot = document.createTextNode(mentalHealth);
     }else if(lowMessage.includes("joke")){
         messageTextBot = document.createTextNode(joke);
