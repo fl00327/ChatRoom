@@ -121,13 +121,13 @@ function onMessageReceived9(payload) {
     var finalmessage = message9.content;
     let lowMessage = finalmessage.toLowerCase();
 
-    var pizza = "Eat lots of Pizza!!!";
+    var pizza = "Eat lots of Pizza";
     var unibpt = "I think people call me UniBot"
     var gym = "I am preparing to go to the Gym";
     var movie = "My Favourite Movie is The Matrix";
-    var hello = "Hello :D";
-    var hi = "Hi, How are you!!!";
-    var goodtoKnow = "That make me happy, hope you have a good day"
+    var hello = "Hello";
+    var hi = "Hi, How are you?";
+    var goodtoKnow = "That makes me happy, hope you have a good day"
     var autoReply = "I'm not sure what you mean by that.";
     var monday = "Monday";
     var tuesday = "Tuesday";
@@ -194,6 +194,7 @@ function onMessageReceived9(payload) {
     var goodz = "I'm glad you're enjoying it!"
     var prolly = "I'll probably just go to sleep."
     var depression = "I am sorry tp hear that. You will find some useful information on the following website: https://www.nhs.uk/nhs-services/mental-health-services/"
+    var suring = "Yes, go ahead."
 
     if(lowMessage.includes("what")){
         if(lowMessage.includes("should i")){
@@ -317,7 +318,10 @@ function onMessageReceived9(payload) {
             messageTextBot = document.createTextNode(joke);
         }else if(lowMessage.includes("hug")){
             messageTextBot = document.createTextNode(hug);
-        } else{
+        }else if(lowMessage.includes("problem")){
+            messageTextBot = document.createTextNode(suring);
+        }
+        else{
             messageTextBot = document.createTextNode(autoReply);
         }
     }else if(lowMessage.includes("where")){
@@ -387,8 +391,7 @@ function onMessageReceived9(payload) {
         messageTextBot = document.createTextNode(agree);
     }else if(lowMessage.includes("hate")){
         messageTextBot = document.createTextNode(hate);
-    }
-    else if(lowMessage.includes("i have")){
+    } else if(lowMessage.includes("i have")){
         if(lowMessage.includes("depression"))
             messageTextBot = document.createTextNode(depression);
         else if(lowMessage.includes("anxiety")){
@@ -402,6 +405,8 @@ function onMessageReceived9(payload) {
         }
         else if(lowMessage.includes("mental health issues")){
             messageTextBot = document.createTextNode(depression);
+        }else{
+            messageTextBot = document.createTextNode(autoReply);
         }
     }
     else{
