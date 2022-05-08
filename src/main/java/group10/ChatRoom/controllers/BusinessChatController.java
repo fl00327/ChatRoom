@@ -15,7 +15,7 @@ public class BusinessChatController {
 
     @GetMapping("/business")
     public String getBusinessChat(User user){
-        return "view/business"; //Return chat page
+        return "view/business"; //Return businessChat page
     }
 
     @MessageMapping("/chateight.sendMessage")

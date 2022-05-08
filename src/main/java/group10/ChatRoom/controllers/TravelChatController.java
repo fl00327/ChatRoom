@@ -15,7 +15,7 @@ public class TravelChatController {
 
     @GetMapping("/travel")
     public String getTravelChat(User user){
-        return "view/travel"; //Return chat page
+        return "view/travel"; //Return travel page
     }
 
     @MessageMapping("/chatsix.sendMessage")

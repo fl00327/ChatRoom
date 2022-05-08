@@ -1,6 +1,7 @@
 import mysql.connector
 import mysql.connector.errors
 
+# database connection established with the local database / later when deployed the server automatically updates the following credentials
 dbconn = mysql.connector.connect(
   host="localhost",
   user="root",
@@ -10,6 +11,7 @@ dbconn = mysql.connector.connect(
 
 cursorconn =  dbconn.cursor()
 
+# authenticating users
 def login(username, password):
     try:
       cursorconn.execute("""SELECT * FROM users WHERE email=%s and password = %s """, (username,password))

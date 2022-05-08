@@ -15,7 +15,7 @@ public class FitnessChatController {
 
     @GetMapping("/fitness")
     public String getFitnessChat(User user){
-        return "view/fitness"; //Return chat page
+        return "view/fitness"; //Return mental health page
     }
 
     @MessageMapping("/chatfive.sendMessage")

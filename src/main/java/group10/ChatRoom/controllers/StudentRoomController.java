@@ -15,7 +15,7 @@ public class StudentRoomController {
 
     @GetMapping("/studentroom")
     public String getStudentRoomChat(User user){
-        return "view/studentroom"; //Return chat page
+        return "view/studentroom"; //Return myUni page
     }
 
     @MessageMapping("/chatone.sendMessage")

@@ -17,6 +17,6 @@ public class IndexController {
         if(session.getAttribute("user") != null){
             model.addAttribute("user", session.getAttribute("user")); //If the user is logged in, return the user to model
         }
-        return "view/index"; //Return index page
+        return "view/index"; //Return home page
     }    
 }

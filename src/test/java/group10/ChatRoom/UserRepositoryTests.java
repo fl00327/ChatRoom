@@ -28,7 +28,6 @@ public class UserRepositoryTests {
 
     @Test
     public void testCreateUser(){
-        //RUN THIS CLASS ONLY TO CREATE TABLES
         User user = new User();
         user.setEmail("test2@email.com");
         user.setPassword(encoder.encode("password123"));

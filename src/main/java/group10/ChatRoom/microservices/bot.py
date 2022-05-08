@@ -5,7 +5,7 @@ import torch
 tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
 model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-medium")
 
-name = "Faseeh"
+name = "created"
 mentalhealth = "Mental"
 stag = "Stag"
 
@@ -13,7 +13,7 @@ def get_chat_response(text):
     # Let's chat for 5 lines
     text = str(text).replace("_", " ")
     if name in text:
-        var1 = "I was created by Faseeh at the University Of Surrey"
+        var1 = "I was created by Midnight Coders at the University Of Surrey"
         return var1
     elif mentalhealth in text:
         var2 = "You should contact your GP or NHS (111)\nIf You need to talk to someone in the night, there is a nightline service provided by the University Of Surrey's SU."

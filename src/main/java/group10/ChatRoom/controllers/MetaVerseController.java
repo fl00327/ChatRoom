@@ -15,7 +15,7 @@ public class MetaVerseController {
 
     @GetMapping("/metaverse")
     public String getMetaVerseChat(User user){
-        return "view/metaverse"; //Return chat page
+        return "view/metaverse"; //Return metaverse page
     }
 
     @MessageMapping("/chattwo.sendMessage")

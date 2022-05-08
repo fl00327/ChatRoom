@@ -15,7 +15,7 @@ public class TechnologyChatController {
 
     @GetMapping("/technology")
     public String getTechnologyChat(User user){
-        return "view/technology"; //Return chat page
+        return "view/technology"; //Return tech page
     }
 
     @MessageMapping("/chatfour.sendMessage")

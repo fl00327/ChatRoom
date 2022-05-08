@@ -12,9 +12,9 @@ def chat(name):
 
 @app.route("/login", methods=['POST'])
 def loginfunc():
-    jsonrequest = request.get_json()
+    jsonrequest = request.get_json() #getting the JSON request
     try:
-        if(jsonrequest['username'] and jsonrequest['password']):
+        if(jsonrequest['username'] and jsonrequest['password']): # validating username and password
             out1, out2 = login(jsonrequest['username'], jsonrequest['password'])
             if isinstance(out1, int):
                 if out2 == 'Invalid Login':
@@ -34,7 +34,7 @@ def loginfunc():
 def registerfunc():
     jsonrequest = request.get_json()
     try:
-        if(jsonrequest['email'] and jsonrequest['firstName'] and jsonrequest['lastName'] and jsonrequest['password']):
+        if(jsonrequest['email'] and jsonrequest['firstName'] and jsonrequest['lastName'] and jsonrequest['password']): # registering user with the formatted credentials
             out1, out2 = register(jsonrequest['email'], jsonrequest['firstName'], jsonrequest['lastName'], jsonrequest['password'])
             if out1 != 200:
                 message = {'message':out2}

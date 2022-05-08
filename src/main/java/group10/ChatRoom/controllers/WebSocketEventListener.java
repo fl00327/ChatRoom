@@ -65,7 +65,7 @@ public class WebSocketEventListener {
             chatMessage.setSender(username);
 
 
-
+            // microservice updating the application that the user left the particular chatroom
             messagingTemplate.convertAndSend("/topic/public", chatMessage);
 
         }
@@ -77,7 +77,7 @@ public class WebSocketEventListener {
             chatMessage1.setType(ChatMessage.MessageType.LEAVE);
             chatMessage1.setSender(username1);
 
-
+            // microservice updating the application that the user left the particular chatroom
             messagingTemplateOne.convertAndSend("/topic/publicone", chatMessage1);
         }
 
@@ -88,7 +88,7 @@ public class WebSocketEventListener {
             chatMessage2.setType(ChatMessage.MessageType.LEAVE);
             chatMessage2.setSender(username2);
 
-
+            // microservice updating the application that the user left the particular chatroom
             messagingTemplateTwo.convertAndSend("/topic/publictwo", chatMessage2);
         }
 
@@ -99,7 +99,7 @@ public class WebSocketEventListener {
             chatMessage3.setType(ChatMessage.MessageType.LEAVE);
             chatMessage3.setSender(username3);
 
-
+            // microservice updating the application that the user left the particular chatroom
             messagingTemplateTwo.convertAndSend("/topic/publicthree", chatMessage3);
         }
 
@@ -110,7 +110,7 @@ public class WebSocketEventListener {
             chatMessage4.setType(ChatMessage.MessageType.LEAVE);
             chatMessage4.setSender(username4);
 
-
+            // microservice updating the application that the user left the particular chatroom
             messagingTemplateTwo.convertAndSend("/topic/publicfour", chatMessage4);
         }
 
@@ -121,7 +121,7 @@ public class WebSocketEventListener {
             chatMessage5.setType(ChatMessage.MessageType.LEAVE);
             chatMessage5.setSender(username5);
 
-
+            // microservice updating the application that the user left the particular chatroom
             messagingTemplateTwo.convertAndSend("/topic/publicfive", chatMessage5);
         }
 
@@ -132,6 +132,7 @@ public class WebSocketEventListener {
             chatMessage6.setType(ChatMessage.MessageType.LEAVE);
             chatMessage6.setSender(username6);
 
+            // microservice updating the application that the user left the particular chatroom
 
             messagingTemplateTwo.convertAndSend("/topic/publicsix", chatMessage6);
         }
@@ -144,6 +145,8 @@ public class WebSocketEventListener {
             chatMessage7.setSender(username7);
 
 
+            // microservice updating the application that the user left the particular chatroom
+
             messagingTemplateTwo.convertAndSend("/topic/publicseven", chatMessage7);
         }
 
@@ -154,7 +157,7 @@ public class WebSocketEventListener {
             chatMessage8.setType(ChatMessage.MessageType.LEAVE);
             chatMessage8.setSender(username8);
 
-
+            // microservice updating the application that the user left the particular chatroom
             messagingTemplateTwo.convertAndSend("/topic/publiceight", chatMessage8);
         }
     }

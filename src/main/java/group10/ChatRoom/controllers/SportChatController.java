@@ -15,7 +15,7 @@ public class SportChatController {
 
     @GetMapping("/sport")
     public String getSportChat(User user){
-        return "view/sport"; //Return chat page
+        return "view/sport"; //Return extra---/--activities page
     }
 
     @MessageMapping("/chatseven.sendMessage")

@@ -15,7 +15,7 @@ public class FoodChatController {
 
     @GetMapping("/food")
     public String getFoodChat(User user){
-        return "view/food"; //Return chat page
+        return "view/food"; //Return nutrition page
     }
 
     @MessageMapping("/chatthree.sendMessage")
