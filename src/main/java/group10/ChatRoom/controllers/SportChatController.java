@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class SportChatController {
 
-    @GetMapping("/sport")
+    @GetMapping("/travel")
     public String getSportChat(User user){
         return "view/sport"; //Return extra---/--activities page
     }

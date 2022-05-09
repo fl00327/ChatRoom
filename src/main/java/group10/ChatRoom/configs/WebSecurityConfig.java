@@ -32,21 +32,29 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-            .authorizeRequests()
-            .antMatchers("/profile").authenticated()
-            .antMatchers("/chat").authenticated()
+                .authorizeRequests()
+                .antMatchers("/profile").authenticated()
+                .antMatchers("/chat").authenticated()
                 .antMatchers("/studentroom").authenticated()
                 .antMatchers("/metaverse").authenticated()
                 .antMatchers("/chatrooms").authenticated()
-            .antMatchers("/register").not().authenticated()
-            .and()
-            .formLogin()
+                .antMatchers("/chatbot").authenticated()
+                .antMatchers("/covid").authenticated()
+                .antMatchers("/technology").authenticated()
+                .antMatchers("/travel").authenticated()
+                .antMatchers("/alumni").authenticated()
+                .antMatchers("/business").authenticated()
+                .antMatchers("/fitness").authenticated()
+                .antMatchers("/food").authenticated()
+                .antMatchers("/register").not().authenticated()
+                .and()
+                .formLogin()
                 .loginPage("/login")
                 .usernameParameter("email")
                 .defaultSuccessUrl("/profile")
                 .permitAll()
-            .and()
-            .logout().logoutSuccessUrl("/").permitAll();
+                .and()
+                .logout().logoutSuccessUrl("/").permitAll();
     }
     
 
