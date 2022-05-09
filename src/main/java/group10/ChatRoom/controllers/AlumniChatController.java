@@ -11,11 +11,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class TravelChatController {
+public class AlumniChatController {
 
-    @GetMapping("/travel")
-    public String getTravelChat(User user){
-        return "view/travel"; //Return travel page
+    @GetMapping("/alumni")
+    public String getAlumniChat(User user){
+        return "view/alumni"; //Return travel page
     }
 
     @MessageMapping("/chatsix.sendMessage")
